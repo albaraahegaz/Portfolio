@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Al-baraa Hegaz — AI Engineer & Data Scientist. Combining mathematical foundations, data analysis, machine learning, deep learning, and modern AI engineering to build practical intelligent systems.">
+  <meta name="keywords"
+    content="Al-baraa Hegaz, AI Engineer, Data Scientist, Machine Learning, Deep Learning, RAG, LangGraph, Python, Cairo, Egypt">
+  <meta name="author" content="Al-baraa Hegaz">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Al-baraa Hegaz | AI Engineer & Data Scientist">
+  <meta property="og:description"
+    content="Turning Data and Intelligence Into Practical Solutions. Mathematical thinking + Data + AI Engineering.">
+  <meta property="og:type" content="website">
+
+  <title>Al-baraa Hegaz | AI Engineer & Data Scientist</title>
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@600;700;800&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Ambient Cursor Spotlight Overlay -->
+  <div class="ambient-spotlight" id="ambientSpotlight" aria-hidden="true"></div>
+
+  <!-- Interactive Neural Circuit Canvas -->
+  <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Al-baraa Hegaz Home">
+        <span class="logo-symbol">&lang;</span>
+        <span class="logo-initials">AH</span>
+        <span class="logo-symbol">&rang;</span>
+        <span class="logo-status-pulse" title="Available for collaborative AI projects"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#objective" class="nav-link">Objective</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utility Actions: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark and light theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-menu">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#objective" class="mobile-nav-link">Objective</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="badge-dot"></span>
+            <span class="badge-text">AI ENGINEER &amp; DATA SCIENTIST</span>
+            <span class="badge-separator">•</span>
+            <span class="badge-location">CAIRO, EGYPT</span>
+          </div>
+
+          <h1 class="hero-name animate-fade-in delay-1">
+            AL-BARAA <span class="text-gold-gradient">HEGAZ</span>
+          </h1>
+
+          <p class="hero-headline animate-fade-in delay-2">
+            "Turning Data and Intelligence Into Practical Solutions."
+          </p>
+
+          <p class="hero-description animate-fade-in delay-3">
+            Analytical AI Engineer and Data Scientist combining mathematical foundations, data analysis, machine
+            learning, deep learning, and modern AI engineering to build intelligent, data-driven systems.
+          </p>
+
+          <!-- CTAs with Magnetic Effect -->
+          <div class="hero-cta-group animate-fade-in delay-4">
+            <a href="#projects" class="btn btn-primary magnetic-btn" id="heroBtnProjects">
+              <span class="btn-text">VIEW PROJECTS</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn" id="heroBtnContact">
+              <span class="btn-text">CONTACT ME</span>
+            </a>
+            <button class="btn btn-tertiary" id="downloadCvBtn" aria-label="Download Curriculum Vitae">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>DOWNLOAD CV</span>
+            </button>
+          </div>
+
+          <!-- Hero Micro-Proof Metrics -->
+          <div class="hero-ethos-row animate-fade-in delay-5">
+            <div class="ethos-pill">
+              <span class="ethos-glyph">&nabla;</span>
+              <span>Mathematical Foundations</span>
+            </div>
+            <div class="ethos-pill">
+              <span class="ethos-glyph">&Sigma;</span>
+              <span>Data-Driven Logic</span>
+            </div>
+            <div class="ethos-pill">
+              <span class="ethos-glyph">&infin;</span>
+              <span>AI Engineering Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Technical AI System Graphic -->
+        <div class="hero-visual-wrapper animate-fade-in delay-2">
+          <div class="hero-tech-card" id="heroTechCard">
+            <!-- Tech Frame Accent Elements -->
+            <div class="card-crosshair top-left"></div>
+            <div class="card-crosshair top-right"></div>
+            <div class="card-crosshair bottom-left"></div>
+            <div class="card-crosshair bottom-right"></div>
+
+            <div class="tech-card-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot gold"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">hegaz_core_system.py</span>
+              <span class="terminal-status">ONLINE</span>
+            </div>
+
+            <div class="technical-avatar-display">
+              <!-- Golden Rim & Ambient Circuit Frame -->
+              <div class="avatar-glow-ring"></div>
+              <div class="circuit-ring"></div>
+
+              <!-- Authentic Profile Portrait in Technical HUD Frame -->
+              <div class="avatar-inner">
+                <img src="assets/albaraa_hegaz.png" alt="Al-baraa Hegaz — AI Engineer & Data Scientist"
+                  class="hero-avatar-photo">
+                <div class="avatar-overlay-gradient" aria-hidden="true"></div>
+              </div>
+
+              <!-- Mathematical Floating Annotations -->
+              <div class="floating-math-tag tag-1">&nabla;L(&theta;)</div>
+              <div class="floating-math-tag tag-2">&sigma;(W&sdot;x + b)</div>
+              <div class="floating-math-tag tag-3">RAG_Q&amp;A</div>
+            </div>
+
+            <!-- Terminal Info Matrix -->
+            <div class="tech-card-footer">
+              <div class="code-line">
+                <span class="code-keyword">spec</span>: <span class="code-val">"Physics &amp; Mathematics &rarr;
+                  AI"</span>
+              </div>
+              <div class="code-line">
+                <span class="code-keyword">pipeline</span>: <span class="code-val">["RAG", "LangGraph", "Deep Learning",
+                  "EDA"]</span>
+              </div>
+              <div class="code-status">
+                <span class="status-indicator"></span> Ready to build intelligent systems
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT ME SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">PHILOSOPHY &amp; BACKGROUND</div>
+          <h2 class="section-title">Bridging <span class="text-gold-gradient">Mathematical Rigor</span> &amp; Modern AI
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Executive Profile Portrait Card -->
+          <div class="about-portrait-card tilt-card">
+            <div class="about-photo-wrapper">
+              <img src="assets/albaraa_hegaz.png" alt="Al-baraa Hegaz portrait in black suit and red tie"
+                class="about-full-photo">
+              <div class="about-photo-glow" aria-hidden="true"></div>
+              <div class="about-photo-meta">
+                <span class="meta-name">AL-BARAA HEGAZ</span>
+                <span class="meta-tag">AI ENGINEER &bull; DATA SCIENTIST</span>
+              </div>
+            </div>
+            <div class="about-card-badge-row">
+              <span class="about-badge-chip">Physics &amp; Math</span>
+              <span class="about-badge-chip">AI &amp; Data Systems</span>
+              <span class="about-badge-chip">Cairo, Egypt</span>
+            </div>
+          </div>
+
+          <div class="about-narrative-card tilt-card">
+            <h3 class="about-heading">Analytical Foundations &amp; Practical Engineering</h3>
+
+            <p class="about-paragraph">
+              Analytical fourth-year Physics and Mathematics undergraduate specializing in Artificial Intelligence,
+              Machine Learning, and Data Science.
+            </p>
+            <p class="about-paragraph">
+              My background in mathematics and physics shapes the way I approach technology: I break complex problems
+              into structured components, understand the underlying patterns, and turn them into practical solutions.
+            </p>
+            <p class="about-paragraph">
+              My work spans data analysis, machine learning, deep learning, AI engineering, Retrieval-Augmented
+              Generation, and intelligent applications.
+            </p>
+            <p class="about-paragraph highlight-text">
+              I enjoy moving from raw data and research questions to systems that can actually provide useful insights
+              or intelligent assistance.
+            </p>
+
+            <!-- Focus Pillars -->
+            <div class="pillars-row">
+              <div class="pillar-item">
+                <div class="pillar-icon">&nabla;</div>
+                <div class="pillar-text">Structured Decomposition</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon">&fnof;(x)</div>
+                <div class="pillar-text">Empirical Pattern Discovery</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon">&Delta;</div>
+                <div class="pillar-text">Production Reliability</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlight Metric Cards (Animated on Scroll) -->
+        <div class="about-stats-grid">
+          <div class="stat-card tilt-card" data-stat>
+            <div class="stat-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="stat-number">4th <span class="stat-unit">Year</span></div>
+            <div class="stat-title">Physics &amp; Mathematics</div>
+            <p class="stat-desc">Undergraduate grounding theoretical modeling, linear algebra, calculus, and mechanics.
+            </p>
+          </div>
+
+          <div class="stat-card tilt-card" data-stat>
+            <div class="stat-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">AI / ML</div>
+            <div class="stat-title">Core Specialization</div>
+            <p class="stat-desc">Dedicated focus on Deep Learning, NLP, Agentic RAG workflows, and Data Science.</p>
+          </div>
+
+          <div class="stat-card tilt-card highlight-card" data-stat>
+            <div class="stat-icon-wrapper red">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">Top 5</div>
+            <div class="stat-title">AI Hackathon Finalist</div>
+            <p class="stat-desc">Creativa Innovation Hub (Menofia, 2026) for building Sadeed Clinical RAG system.</p>
+          </div>
+
+          <div class="stat-card tilt-card highlight-card" data-stat>
+            <div class="stat-icon-wrapper gold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M18 14.66V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M15 9V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+              </svg>
+            </div>
+            <div class="stat-number">16th <span class="stat-unit">/ 139</span></div>
+            <div class="stat-title">ImpactX 2026 Finalist</div>
+            <p class="stat-desc">Placed in the Top 12% across 139 competing tech teams with Fahman.ai Socratic Tutor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">TECHNICAL CAPABILITIES</div>
+          <h2 class="section-title">Specialized <span class="text-gold-gradient">Skill Matrix</span></h2>
+          <p class="section-lead">Structured categorization of technical tools, frameworks, and scientific libraries
+            without arbitrary percentages.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming -->
+          <div class="skill-category-card tilt-card" data-category="programming">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-name">PROGRAMMING</h3>
+            </div>
+            <p class="category-desc">Core language engineering, relational schemas, and modular architecture.</p>
+            <div class="skill-tags">
+              <span class="skill-tag highlighted">Python</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Object-Oriented Programming</span>
+            </div>
+          </div>
+
+          <!-- Category 2: AI & Machine Learning -->
+          <div class="skill-category-card tilt-card" data-category="aiml">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="category-name">AI &amp; MACHINE LEARNING</h3>
+            </div>
+            <p class="category-desc">Predictive modeling, neural architectures, representation learning, and modern NLP.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag highlighted">Machine Learning</span>
+              <span class="skill-tag highlighted">Deep Learning</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag highlighted">PyTorch</span>
+              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">Transformers</span>
+              <span class="skill-tag highlighted">RAG</span>
+              <span class="skill-tag">AI Engineering</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Data Science & Analytics -->
+          <div class="skill-category-card tilt-card" data-category="datascience">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="category-name">DATA SCIENCE &amp; ANALYTICS</h3>
+            </div>
+            <p class="category-desc">Statistical hypothesis testing, distribution modeling, and feature pipelines.</p>
+            <div class="skill-tags">
+              <span class="skill-tag highlighted">Data Analysis</span>
+              <span class="skill-tag">Exploratory Data Analysis</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag highlighted">Statistics</span>
+              <span class="skill-tag">Feature Engineering</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Data Visualization -->
+          <div class="skill-category-card tilt-card" data-category="dataviz">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </svg>
+              </div>
+              <h3 class="category-name">DATA VISUALIZATION</h3>
+            </div>
+            <p class="category-desc">Executive business intelligence, interactive KPI views, and publication graphics.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag highlighted">Power BI</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">Microsoft Excel</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+            </div>
+          </div>
+
+          <!-- Category 5: AI Engineering / LLM -->
+          <div class="skill-category-card tilt-card" data-category="llm">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <h3 class="category-name">AI ENGINEERING / LLM</h3>
+            </div>
+            <p class="category-desc">Agentic workflows, vector search indexes, structured tool calling, and evaluation.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag highlighted">LLM Applications</span>
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag highlighted">LangChain</span>
+              <span class="skill-tag highlighted">LangGraph</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Pinecone</span>
+              <span class="skill-tag highlighted">Vector Databases</span>
+              <span class="skill-tag">Embeddings</span>
+              <span class="skill-tag">LLMOps</span>
+              <span class="skill-tag">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Tools & Operations -->
+          <div class="skill-category-card tilt-card" data-category="tools">
+            <div class="category-header">
+              <div class="cat-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="category-name">TOOLS &amp; EVALUATION</h3>
+            </div>
+            <p class="category-desc">Version control, serving APIs, tracing, and automated benchmark evaluations.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Jupyter Notebook</span>
+              <span class="skill-tag highlighted">FastAPI</span>
+              <span class="skill-tag highlighted">LangSmith</span>
+              <span class="skill-tag highlighted">RAGAS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FEATURED PROJECTS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">PORTFOLIO WORK</div>
+          <h2 class="section-title">Featured <span class="text-gold-gradient">Intelligent Systems</span></h2>
+          <p class="section-lead">Real-world AI implementations combining hybrid retrieval, agentic graphs, speech/NLP
+            models, and business intelligence.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 01: Sadeed -->
+          <article class="project-card tilt-card" data-project-id="sadeed">
+            <div class="project-card-banner">
+              <div class="project-index">01 // CLINICAL AI</div>
+              <div class="project-badge gold-badge">
+                <span class="badge-star">&starf;</span>
+                Top 5 Finalist &mdash; AI Hackathon
+              </div>
+            </div>
+            <div class="project-image-gallery">
+              <img src="assets/Sadeed project.jfif" alt="Sadeed clinical RAG system" class="project-gallery-img active"
+                loading="lazy">
+              <img src="assets/Sadeed interface.jpg" alt="Sadeed user interface" class="project-gallery-img"
+                loading="lazy">
+              <div class="gallery-nav">
+                <button class="gallery-dot active" onclick="switchGalleryImg(this, 0)" aria-label="Image 1"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 1)" aria-label="Image 2"></button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Sadeed</h3>
+              <div class="project-subtitle">AI-Powered Clinical RAG System</div>
+
+              <p class="project-description">
+                An AI clinical co-pilot developed for oncology information support. Sadeed combines hybrid retrieval
+                using semantic search and BM25 with an agentic RAG workflow built using LangGraph. The system
+                incorporates safety guardrails, source-grounded generation, evaluation, and tracing to improve
+                reliability.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">RAG</span>
+                <span class="tech-pill">LangGraph</span>
+                <span class="tech-pill">LlamaParse</span>
+                <span class="tech-pill">Supabase pgvector</span>
+                <span class="tech-pill">Gemini</span>
+                <span class="tech-pill">RAGAS</span>
+                <span class="tech-pill">LangSmith</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Next.js</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <button class="btn btn-project-view" onclick="openProjectModal('sadeed')">
+                <span>VIEW PROJECT DETAILS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="project-links">
+                <a href="#" class="project-link-icon" title="Source Code (Placeholder)" aria-label="Sadeed Repository"
+                  onclick="handlePlaceholderClick(event, 'Sadeed Code Repository')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: Fahman.ai -->
+          <article class="project-card tilt-card" data-project-id="fahman">
+            <div class="project-card-banner">
+              <div class="project-index">02 // EDTECH &amp; ARABIC NLP</div>
+              <div class="project-badge crimson-badge">
+                <span class="badge-star">&starf;</span>
+                16th of 139 Teams &mdash; ImpactX 2026 (Top 12%)
+              </div>
+            </div>
+            <div class="project-image-gallery">
+              <img src="assets/Fahman project cover.png" alt="Fahman.ai Socratic Arabic Reading Tutor Cover"
+                class="project-gallery-img active" loading="lazy">
+              <img src="assets/Fahman project (1).jpg" alt="Fahman.ai project overview" class="project-gallery-img"
+                loading="lazy">
+              <img src="assets/Fahman project (2).jpg" alt="Fahman.ai interface" class="project-gallery-img"
+                loading="lazy">
+              <img src="assets/Fahman project (3).jpg" alt="Fahman.ai system" class="project-gallery-img"
+                loading="lazy">
+              <div class="gallery-nav">
+                <button class="gallery-dot active" onclick="switchGalleryImg(this, 0)" aria-label="Image 1"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 1)" aria-label="Image 2"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 2)" aria-label="Image 3"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 3)" aria-label="Image 4"></button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Fahman.ai</h3>
+              <div class="project-subtitle">Socratic Arabic Reading Tutor</div>
+
+              <p class="project-description">
+                An Arabic reading tutor designed for children aged 6–9. Fahman diagnoses specific reading mistakes such
+                as letter shape, dots, harakat, and blending, then guides the learner using a Socratic hint ladder
+                instead of simply giving the answer.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Nile-Chat-4B</span>
+                <span class="tech-pill">Qari-OCR</span>
+                <span class="tech-pill">Whisper</span>
+                <span class="tech-pill">Mishkal</span>
+                <span class="tech-pill">Edge TTS</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Next.js</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <button class="btn btn-project-view" onclick="openProjectModal('fahman')">
+                <span>VIEW PROJECT DETAILS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="project-links">
+                <a href="#" class="project-link-icon" title="Source Code (Placeholder)"
+                  aria-label="Fahman.ai Repository"
+                  onclick="handlePlaceholderClick(event, 'Fahman.ai Code Repository')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Food Mart Sales Analysis -->
+          <article class="project-card tilt-card" data-project-id="foodmart">
+            <div class="project-card-banner">
+              <div class="project-index">03 // BUSINESS INTELLIGENCE</div>
+              <div class="project-badge blue-badge">
+                <span class="badge-star">&bull;</span>
+                Interactive BI Dashboard
+              </div>
+            </div>
+            <div class="project-image-gallery">
+              <img src="assets/Power BI dashboard.jfif" alt="Power BI dashboard overview"
+                class="project-gallery-img active" loading="lazy">
+              <img src="assets/Power BI Relationship table.jpg" alt="Power BI data model" class="project-gallery-img"
+                loading="lazy">
+              <div class="gallery-nav">
+                <button class="gallery-dot active" onclick="switchGalleryImg(this, 0)" aria-label="Image 1"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 1)" aria-label="Image 2"></button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Food Mart Sales Analysis</h3>
+              <div class="project-subtitle">Interactive Power BI Dashboard</div>
+
+              <p class="project-description">
+                An interactive business intelligence dashboard analyzing Food Mart sales data through cleaning,
+                exploratory analysis, and KPI-driven visualization.
+              </p>
+
+              <!-- Tracked KPIs -->
+              <div class="kpi-tag-row">
+                <span class="kpi-chip">Revenue</span>
+                <span class="kpi-chip">Cost</span>
+                <span class="kpi-chip">Profit</span>
+                <span class="kpi-chip">Margins</span>
+                <span class="kpi-chip">Customers</span>
+                <span class="kpi-chip">Returns</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Power BI</span>
+                <span class="tech-pill">DAX</span>
+                <span class="tech-pill">EDA</span>
+                <span class="tech-pill">Data Analysis</span>
+                <span class="tech-pill">Data Visualization</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <button class="btn btn-project-view" onclick="openProjectModal('foodmart')">
+                <span>VIEW PROJECT DETAILS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="project-links">
+                <a href="#" class="project-link-icon" title="Dashboard Preview (Placeholder)"
+                  aria-label="Food Mart Dashboard" onclick="handlePlaceholderClick(event, 'Food Mart Dashboard')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: RoadHero -->
+          <article class="project-card tilt-card" data-project-id="roadhero">
+            <div class="project-card-banner">
+              <div class="project-index">04 // CONCEPT &amp; PRODUCT STRATEGY</div>
+              <div class="project-badge purple-badge">
+                <span class="badge-star">&bull;</span>
+                Emergency Assistance App Concept
+              </div>
+            </div>
+            <div class="project-image-gallery">
+              <img src="assets/RoadHero project (1).jpg" alt="RoadHero app concept" class="project-gallery-img active"
+                loading="lazy">
+              <img src="assets/RoadHero project (2).jpg" alt="RoadHero prototype" class="project-gallery-img"
+                loading="lazy">
+              <div class="gallery-nav">
+                <button class="gallery-dot active" onclick="switchGalleryImg(this, 0)" aria-label="Image 1"></button>
+                <button class="gallery-dot" onclick="switchGalleryImg(this, 1)" aria-label="Image 2"></button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">RoadHero</h3>
+              <div class="project-subtitle">On-Demand Roadside Assistance Concept</div>
+
+              <p class="project-description">
+                An Uber-style emergency assistance application concept designed to help people who are stuck on the road
+                quickly find appropriate help. Developed from idea through business concept, pitch, and prototype.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Product Strategy</span>
+                <span class="tech-pill">Entrepreneurship</span>
+                <span class="tech-pill">MVP</span>
+                <span class="tech-pill">Business Modeling</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <button class="btn btn-project-view" onclick="openProjectModal('roadhero')">
+                <span>VIEW PROJECT DETAILS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="project-links">
+                <a href="#" class="project-link-icon" title="Pitch &amp; Prototype Details"
+                  aria-label="RoadHero Concept" onclick="handlePlaceholderClick(event, 'RoadHero Prototype Details')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         EXPERIENCE TIMELINE SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">PROFESSIONAL TRAJECTORY</div>
+          <h2 class="section-title">Applied <span class="text-gold-gradient">Experience &amp; Training</span></h2>
+          <p class="section-lead">Documented technical traineeships and innovation programs building practical
+            engineering competence.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-central-line"></div>
+
+          <!-- Timeline Item 01: DEPI -->
+          <div class="timeline-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">01</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Data Engineering Trainee</h3>
+                  <div class="timeline-company">Digital Egypt Pioneers Initiative &mdash; DEPI</div>
+                </div>
+                <div class="timeline-period">Jul 2026 &ndash; Present</div>
+              </div>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">Data Engineering Development</span>
+                <span class="highlight-tag">Technical Training</span>
+                <span class="highlight-tag">Practical Data Technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 02: ImpactX Hackathon -->
+          <div class="timeline-item highlight-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot gold"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">02</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Participant &mdash; ImpactX 2026 Hackathon</h3>
+                  <div class="timeline-company">Egyptian Chinese University</div>
+                </div>
+                <div class="timeline-period">Sep 2026</div>
+              </div>
+              <div class="timeline-achievement-banner">
+                <span class="trophy-icon">&starf;</span> Ranked 16th / 139 Teams &mdash; Top 12% &bull; Score 83/110
+              </div>
+              <p class="timeline-text">
+                Competed with a team of three at ImpactX 2026, Cairo, placing in the top 12% across 139 competing teams.
+              </p>
+              <p class="timeline-text">
+                Our project, <strong>Fahman</strong>, is an Arabic reading tutor for children aged 6&ndash;9. It
+                diagnoses the exact mistake (letter shape, dots, haraka, or blending) and guides the child with a
+                Socratic hint ladder instead of giving the word away.
+              </p>
+              <p class="timeline-text">
+                Built on an open-source stack (Nile-Chat-4B, Whisper, Qari-OCR, Mishkal, Edge TTS) with no fine-tuning.
+                Also developed the business plan: business model canvas, financial model, and funding roadmap.
+              </p>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">NLP</span>
+                <span class="highlight-tag">Speech Recognition</span>
+                <span class="highlight-tag">Arabic AI</span>
+                <span class="highlight-tag">EdTech</span>
+                <span class="highlight-tag">Business Strategy</span>
+                <span class="highlight-tag">Open-Source Stack</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/ImpactX Hackathon team.jpg" alt="ImpactX Hackathon team" class="timeline-photo"
+                  loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 03: NTI - Huawei AI Engineering Trainee -->
+          <div class="timeline-item highlight-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot gold"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">03</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">AI Engineering Trainee</h3>
+                  <div class="timeline-company">National Telecommunication Institute (NTI) &mdash; Huawei Egyptian Talents Academy (ETA)</div>
+                </div>
+                <div class="timeline-period">Aug 2026 &ndash; Sep 2026</div>
+              </div>
+              <div class="timeline-achievement-banner">
+                <span class="trophy-icon">&starf;</span> 80-Hour Intensive Program &bull; HCIA-AI V4.0 Certified &bull; Creativa Hub
+              </div>
+              <p class="timeline-text">
+                Completed an intensive 80-hour Artificial Intelligence training program at the National Telecommunication
+                Institute (NTI) through the Huawei Egyptian Talents Academy (ETA), covering Machine Learning, Deep
+                Learning, and modern AI architectures with hands-on implementation using Python and PyTorch.
+              </p>
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet-item">Studied Machine Learning algorithms, Ensemble Learning, Boosting &amp; Bagging, and optimization techniques.</li>
+                <li class="timeline-bullet-item">Implemented CNNs, RNNs, LSTMs, and Seq2Seq architectures using PyTorch.</li>
+                <li class="timeline-bullet-item">Explored Attention Mechanisms, Transformers, Foundation Models, GPT, and BERT.</li>
+                <li class="timeline-bullet-item">Applied AI concepts to scientific and business-oriented use cases.</li>
+                <li class="timeline-bullet-item">Developed a deeper understanding of the mathematical foundations behind AI and Machine Learning algorithms.</li>
+                <li class="timeline-bullet-item">Collaborated with peers on practical AI learning activities and projects.</li>
+              </ul>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">PyTorch</span>
+                <span class="highlight-tag">Python</span>
+                <span class="highlight-tag">Machine Learning</span>
+                <span class="highlight-tag">Deep Learning</span>
+                <span class="highlight-tag">CNNs &amp; RNNs</span>
+                <span class="highlight-tag">Transformers</span>
+                <span class="highlight-tag">Attention Mechanisms</span>
+                <span class="highlight-tag">BERT &amp; GPT</span>
+                <span class="highlight-tag">HCIA-AI V4.0</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/NTI AI Engineering certificate.jpg" alt="Huawei ICT Academy HCIA-AI Certificate" class="timeline-photo"
+                  loading="lazy">
+                <img src="assets/NTI AI Engineering group.jpg" alt="NTI &amp; Huawei AI Training Group at Creativa Hub" class="timeline-photo"
+                  loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 04: InnovEgypt -->
+          <div class="timeline-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">04</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Trainee &mdash; InnovEgypt Entrepreneurship Program</h3>
+                  <div class="timeline-company">Creativa Innovation Hub &mdash; Menofia</div>
+                </div>
+                <div class="timeline-period">Aug 2026</div>
+              </div>
+              <p class="timeline-text">
+                Completed InnovEgypt, a 45-hour entrepreneurship, creativity, and innovation training program run in
+                collaboration with ITIDA and TIEC, including two intensive in-person days.
+              </p>
+              <p class="timeline-text">
+                Learned to spot a real market problem and use creative thinking to shape it into a startup concept,
+                covering innovation, business models, MVPs, market validation, pitch decks, prototyping, and overall
+                startup strategy.
+              </p>
+              <p class="timeline-text">
+                With my team, developed <strong>RoadHero</strong>, an Uber-style app concept that helps people stuck on
+                the road get help quickly instead of not knowing who to call or what to do. Took it from idea to pitch
+                &amp; prototype.
+              </p>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">Entrepreneurship</span>
+                <span class="highlight-tag">Startups Building</span>
+                <span class="highlight-tag">Business Models</span>
+                <span class="highlight-tag">MVPs</span>
+                <span class="highlight-tag">Market Validation</span>
+                <span class="highlight-tag">Pitch Decks</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/InnovEgypt Certificate.jpg" alt="InnovEgypt Certificate" class="timeline-photo"
+                  loading="lazy">
+                <img src="assets/InnovEgypt group.jpg" alt="InnovEgypt team" class="timeline-photo" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 05: Creativa Hub -->
+          <div class="timeline-item highlight-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot gold"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">05</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Participant – AI Hackathon (Team AI Innovators)</h3>
+                  <div class="timeline-company">Creativa Innovation Hub &mdash; Menofia</div>
+                </div>
+                <div class="timeline-period">2026</div>
+              </div>
+              <div class="timeline-achievement-banner">
+                <span class="trophy-icon">&starf;</span> Top 5 Finalist &mdash; AI Hackathon
+              </div>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">Built Sadeed</span>
+                <span class="highlight-tag">Hybrid Retrieval</span>
+                <span class="highlight-tag">Agentic RAG</span>
+                <span class="highlight-tag">LangGraph</span>
+                <span class="highlight-tag">Safety Guardrails</span>
+                <span class="highlight-tag">RAGAS</span>
+                <span class="highlight-tag">LangSmith</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/AI innovators team.jpg" alt="AI innovators team" class="timeline-photo" loading="lazy">
+                <img src="assets/AI innovators certificate.jpeg" alt="AI innovators certificate" class="timeline-photo"
+                  loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 06: Neuromatch -->
+          <div class="timeline-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">06</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Deep Learning Trainee</h3>
+                  <div class="timeline-company">Neuromatch</div>
+                </div>
+                <div class="timeline-period">Jul 2026 &ndash; Aug 2026</div>
+              </div>
+              <p class="timeline-text">
+                Completed intensive deep learning training covering mathematical foundations, optimization algorithms,
+                and modern deep architectures:
+              </p>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">Neural Networks</span>
+                <span class="highlight-tag">PyTorch</span>
+                <span class="highlight-tag">MLPs</span>
+                <span class="highlight-tag">Optimization</span>
+                <span class="highlight-tag">Regularization</span>
+                <span class="highlight-tag">CNNs</span>
+                <span class="highlight-tag">Generative Models</span>
+                <span class="highlight-tag">Diffusion</span>
+                <span class="highlight-tag">Time Series</span>
+                <span class="highlight-tag">NLP</span>
+                <span class="highlight-tag">Attention</span>
+                <span class="highlight-tag">Transformers</span>
+                <span class="highlight-tag">Unsupervised Learning</span>
+                <span class="highlight-tag">Self-Supervised</span>
+                <span class="highlight-tag">Reinforcement Learning</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/NMA Academy Deep Learning Certificate.jpg"
+                  alt="Neuromatch Academy Deep Learning Certificate" class="timeline-photo" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 07: NTI -->
+          <div class="timeline-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-year">2026</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">07</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Data Analysis Trainee</h3>
+                  <div class="timeline-company">National Telecommunication Institute (NTI)</div>
+                </div>
+                <div class="timeline-period">Feb 2026 &ndash; Mar 2026</div>
+              </div>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">SQL</span>
+                <span class="highlight-tag">Microsoft SQL Server</span>
+                <span class="highlight-tag">Excel</span>
+                <span class="highlight-tag">Power BI</span>
+                <span class="highlight-tag">Tableau</span>
+                <span class="highlight-tag">Python</span>
+                <span class="highlight-tag">Data Cleaning</span>
+                <span class="highlight-tag">EDA</span>
+                <span class="highlight-tag">Dashboard Development</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/NTI Data analysis certificate.jpg" alt="NTI Data Analysis Certificate"
+                  class="timeline-photo" loading="lazy">
+                <img src="assets/NTI Data analysis group.jpg" alt="NTI training group photo" class="timeline-photo"
+                  loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 08: 2B Academy -->
+          <div class="timeline-item" data-timeline-item>
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-year">2025</span>
+            </div>
+            <div class="timeline-content tilt-card">
+              <div class="timeline-header">
+                <span class="timeline-index">08</span>
+                <div class="timeline-meta">
+                  <h3 class="timeline-role">Data Scientist Trainee</h3>
+                  <div class="timeline-company">2B Academy</div>
+                </div>
+                <div class="timeline-period">Jul 2025 &ndash; Sep 2025</div>
+              </div>
+              <div class="timeline-highlights">
+                <span class="highlight-tag">Data Cleaning</span>
+                <span class="highlight-tag">SQL</span>
+                <span class="highlight-tag">Tableau</span>
+                <span class="highlight-tag">Python Visualization</span>
+                <span class="highlight-tag">Machine Learning</span>
+                <span class="highlight-tag">Statistics</span>
+              </div>
+              <div class="timeline-photos">
+                <img src="assets/2B certificate.jpg" alt="2B Academy Certificate" class="timeline-photo" loading="lazy">
+                <img src="assets/2B group.jfif" alt="2B Academy training group" class="timeline-photo" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CERTIFICATIONS & CONTINUOUS LEARNING SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="certifications" class="section certs-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">CREDENTIALS &amp; RIGOR</div>
+          <h2 class="section-title">Credentials &amp; <span class="text-gold-gradient">Continuous Learning</span></h2>
+          <p class="section-lead">Verified coursework and technical specializations with strong focus on AI Engineering
+            and Data Science.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Featured AI Engineering Focus Strip -->
+        <div class="ai-learning-strip">
+          <div class="strip-label">
+            <span class="pulse-gold"></span>
+            ACTIVE AI ENGINEERING FOCUS
+          </div>
+          <div class="strip-items">
+            <span class="focus-pill">LangChain</span>
+            <span class="focus-pill">Vector Databases (Pinecone)</span>
+            <span class="focus-pill">Embeddings</span>
+            <span class="focus-pill">OpenAI API</span>
+            <span class="focus-pill">LLMOps</span>
+            <span class="focus-pill">Hugging Face</span>
+            <span class="focus-pill">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <!-- Highlighted Key Credentials Grid -->
+        <div class="certs-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">AI ENGINEERING</div>
+            <img src="assets/Associate AI Engineer for Developers (Career Track).jpg"
+              alt="Associate AI Engineer Certificate" class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">Associate AI Engineer for Developers (Career Track)</h3>
+            <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+            <p class="cert-focus-snippet">26-hour comprehensive track covering end-to-end development of LLM-powered
+              applications.</p>
+            <div class="cert-verify-tag">&check; Verified Career Track</div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">MACHINE LEARNING</div>
+            <img src="assets/Supervised Machine Learning Regression and Classification.jpg"
+              alt="Supervised ML Certificate" class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">Supervised Machine Learning: Regression and Classification</h3>
+            <div class="cert-issuer">Coursera &bull; Issued Aug 2026</div>
+            <p class="cert-focus-snippet">33-hour deep dive into mathematics and theory behind Linear/Logistic
+              Regression &amp; Gradient Descent.</p>
+            <div class="cert-verify-tag">&check; Verified Credential</div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">LLM &amp; AGENTS</div>
+            <img src="assets/Developing LLM Applications with LangChain.jpg" alt="LangChain Certificate"
+              class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">Developing LLM Applications with LangChain</h3>
+            <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+            <p class="cert-focus-snippet">Building LLM systems with prompts, chains, agents, and complex workflows.</p>
+            <div class="cert-verify-tag">&check; Verified Credential</div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">VECTOR SEARCH &amp; RAG</div>
+            <img src="assets/Vector Databases for Embeddings with Pinecone.jpg" alt="Vector Databases Certificate"
+              class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">Vector Databases for Embeddings with Pinecone</h3>
+            <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+            <p class="cert-focus-snippet">Vector search pipelines, indexing, and dense retrieval for Retrieval-Augmented
+              Generation.</p>
+            <div class="cert-verify-tag">&check; Verified Credential</div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">CLOUD &amp; AI</div>
+            <img src="assets/AWS AI Practitioner Challenge.jpg" alt="AWS AI Practitioner Certificate"
+              class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">AWS AI Practitioner Challenge</h3>
+            <div class="cert-issuer">Udacity &bull; Issued Mar 2026</div>
+            <p class="cert-focus-snippet">Cloud AI implementations, Amazon Web Services foundations, and data science
+              tooling.</p>
+            <div class="cert-verify-tag">&check; Verified Challenge</div>
+          </div>
+
+          <!-- Cert 6 -->
+          <div class="cert-card tilt-card featured">
+            <div class="cert-badge-ribbon">DATA SCIENCE &amp; ML</div>
+            <img src="assets/Python for Data Science and Machine Learning Bootcamp.jpg"
+              alt="Python ML Bootcamp Certificate" class="cert-thumbnail" loading="lazy">
+            <h3 class="cert-title">Python for Data Science and Machine Learning Bootcamp</h3>
+            <div class="cert-issuer">Udemy &bull; Issued Nov. 23, 2025</div>
+            <p class="cert-focus-snippet">25-hour comprehensive bootcamp by Jose Portilla covering end-to-end Python ML:
+              NumPy, Pandas, Matplotlib, Scikit-Learn, and advanced model evaluation.</p>
+            <div class="cert-verify-tag cert-link-tag">
+              <a href="https://ude.my/UC-1c552c71-10a1-4dff-b771-221d8c4870b9" target="_blank" rel="noopener noreferrer"
+                aria-label="Verify Python for Data Science and Machine Learning Bootcamp credential on Udemy">&check;
+                Verified &middot; UC-1c552c71&hellip; &nearr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expandable Additional Certifications -->
+        <div class="certs-expandable-container" id="certsExpandable">
+          <div class="certs-grid additional-grid">
+            <!-- Cert: Huawei HCIA-AI -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">ARTIFICIAL INTELLIGENCE</div>
+              <img src="assets/NTI AI Engineering certificate.jpg" alt="Huawei HCIA-AI V4.0 Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">HCIA-AI V4.0 &mdash; Artificial Intelligence</h3>
+              <div class="cert-issuer">Huawei ICT Academy &amp; NTI &bull; Issued Sep 2026</div>
+              <p class="cert-focus-snippet">80-hour intensive curriculum covering Deep Learning, CNNs, RNNs, GANs,
+                Transformers, and PyTorch.</p>
+              <div class="cert-verify-tag">&check; Verified &bull; Code: ICT20260925012859</div>
+            </div>
+
+            <!-- Cert 7 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">AI SYSTEMS</div>
+              <img src="assets/Developing AI Systems with the OpenAI API.jpg" alt="Developing AI Systems Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Developing AI Systems with the OpenAI API</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Production-ready AI architectures and software engineering for scalable AI
+                apps.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 8 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">EMBEDDINGS</div>
+              <img src="assets/Introduction to Embeddings with the OpenAI API.jpg" alt="Embeddings Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Introduction to Embeddings with the OpenAI API</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Semantic search, recommendation systems, clustering, and high-dimensional
+                representations.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 9 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">LLMOPS</div>
+              <img src="assets/LLMOps Concepts.jpg" alt="LLMOps Certificate" class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">LLMOps Concepts</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Development, deployment, evaluation, monitoring, and maintenance of
+                production LLMs.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 10 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">TRANSFORMERS</div>
+              <img src="assets/Working with Hugging Face.jpg" alt="Hugging Face Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Working with Hugging Face</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Hugging Face Hub, pre-trained transformer pipelines, tokenizers, and
+                datasets.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 11 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">PROMPT ENGINEERING</div>
+              <img src="assets/Prompt Engineering with the OpenAI API.jpg" alt="Prompt Engineering Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Prompt Engineering with the OpenAI API</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Prompt optimization, system steering, structured JSON output, and context
+                curation.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 12 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">OPENAI API</div>
+              <img src="assets/Working with the OpenAI API.jpg" alt="OpenAI API Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Working with the OpenAI API</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Integrating large language models directly into Python application backends.
+              </p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 13 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">SOFTWARE ENGINEERING</div>
+              <img src="assets/Software Engineering Principles in Python.jpg" alt="Software Engineering Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Software Engineering Principles in Python</h3>
+              <div class="cert-issuer">DataCamp &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Modular architecture, object-oriented design (OOP), testing, and
+                documentation.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 14 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">POSTGRESQL &amp; SQL</div>
+              <img src="assets/The complete sql bootcamp.jpg" alt="SQL Bootcamp Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">The Complete SQL Bootcamp: Go from Zero to Hero</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Jul 2025</div>
+              <p class="cert-focus-snippet">9 hours of PostgreSQL training covering complex joins, subqueries, and
+                database administration.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 15 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">DATABASE DESIGN</div>
+              <img src="assets/Database fundamentals.jpg" alt="Database Fundamentals Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Database Fundamentals</h3>
+              <div class="cert-issuer">MaharaTech &mdash; ITIMooca &bull; Issued Aug 2025</div>
+              <p class="cert-focus-snippet">Foundational training in relational schema design, normalization, and DBMS
+                concepts.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 16 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">DATA VISUALIZATION</div>
+              <img src="assets/Tablea from A to Z fro data science.jpg" alt="Tableau Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Tableau A-Z: Hands-On Tableau Training for Data Science</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Aug 2025</div>
+              <p class="cert-focus-snippet">8.5 hours of Tableau mastery for executive dashboards, calculated fields,
+                and visual storytelling.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 17 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">PYTHON &amp; EDA</div>
+              <img src="assets/Python from A to Z for data science.jpg" alt="Python A-Z Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Python A-Z: Python For Data Science With Real Exercises</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Aug 2025</div>
+              <p class="cert-focus-snippet">11 hours of practical Python programming, exploratory analysis, and data
+                modeling.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 18 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">STATISTICS</div>
+              <img src="assets/Statistics fro data science and business intellegence.jpg" alt="Statistics Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Statistics for Data Science and Business Analysis</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Aug 2025</div>
+              <p class="cert-focus-snippet">5 hours of probability theory, hypothesis testing, distributions, and
+                inferential statistics.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 19 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">BUSINESS INTELLIGENCE</div>
+              <img src="assets/BI for business intellegence.jpg" alt="Power BI Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Microsoft Power BI Desktop for Business Intelligence</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Dec 2025</div>
+              <p class="cert-focus-snippet">17 hours of in-depth Power BI reporting, DAX measures, and dimensional data
+                modeling.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 20 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">DATA PREPARATION</div>
+              <img src="assets/Python for data science and EDA.jpg" alt="Python EDA Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Python Data Science: Data Prep &amp; EDA with Python</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Dec 2025</div>
+              <p class="cert-focus-snippet">8.5 hours of hands-on data cleaning, handling missingness, outlier
+                detection, and Pandas EDA.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 21 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">ADVANCED EXCEL</div>
+              <img src="assets/Adbanced Excel formulas and functions.jpg" alt="Advanced Excel Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Microsoft Excel: Advanced Excel Formulas &amp; Functions</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Dec 2025</div>
+              <p class="cert-focus-snippet">9.5 hours of advanced dynamic formulas, array modeling, lookup structures,
+                and logic functions.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 22 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">EXCEL PIVOT TABLES</div>
+              <img src="assets/Data analysis with excel bivot tables.jpg" alt="Excel Pivot Tables Certificate"
+                class="cert-thumbnail" loading="lazy">
+              <h3 class="cert-title">Microsoft Excel: Data Analysis with Excel Pivot Tables</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Dec 2025</div>
+              <p class="cert-focus-snippet">7 hours of focused multi-dimensional data summarization, calculated fields,
+                and pivot analysis.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 23 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">EXCEL DASHBOARDS</div>
+              <img src="assets/Excel charts and graphs.jpg" alt="Excel Charts Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">Microsoft Excel: Data Visualization w/ Excel Charts &amp; Graphs</h3>
+              <div class="cert-issuer">Udemy &bull; Issued Dec 2025</div>
+              <p class="cert-focus-snippet">4.5 hours of visual dashboard development, interactive chart design, and KPI
+                reporting.</p>
+              <div class="cert-verify-tag">&check; Verified Credential</div>
+            </div>
+
+            <!-- Cert 24 -->
+            <div class="cert-card tilt-card">
+              <div class="cert-badge-ribbon">STRATEGY &amp; PROBLEM SOLVING</div>
+              <img src="assets/Mckinzy.jpg" alt="McKinsey Forward Program Certificate" class="cert-thumbnail"
+                loading="lazy">
+              <h3 class="cert-title">McKinsey.org Forward Program</h3>
+              <div class="cert-issuer">McKinsey &amp; Company &bull; Issued Jun 2026</div>
+              <p class="cert-focus-snippet">Practical foundational skills for the future of work: structured problem
+                solving &amp; leadership.</p>
+              <div class="cert-verify-tag">&check; Certificate of Completion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-toggle-action">
+          <button id="toggleCertsBtn" class="btn btn-secondary" aria-expanded="false" aria-controls="certsExpandable">
+            <span class="btn-toggle-text">VIEW MORE CERTIFICATIONS</span>
+            <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SERVICES SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">WHAT I BUILD</div>
+          <h2 class="section-title">Core <span class="text-gold-gradient">Technical Services</span></h2>
+          <p class="section-lead">Transforming complex datasets and modern AI capabilities into robust, practical
+            implementations.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- SERVICE 01 -->
+          <div class="service-card tilt-card">
+            <div class="service-top">
+              <span class="service-num">01</span>
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">Data Analysis &amp; Visualization</h3>
+            <p class="service-desc">
+              Transform raw datasets into clear insights through data cleaning, EDA, statistical analysis, dashboards,
+              and reporting.
+            </p>
+            <div class="service-tools">
+              <span class="tool-badge">Python</span>
+              <span class="tool-badge">SQL</span>
+              <span class="tool-badge">Power BI</span>
+              <span class="tool-badge">Tableau</span>
+              <span class="tool-badge">Excel</span>
+            </div>
+          </div>
+
+          <!-- SERVICE 02 -->
+          <div class="service-card tilt-card">
+            <div class="service-top">
+              <span class="service-num">02</span>
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">AI / Machine Learning Solutions</h3>
+            <p class="service-desc">
+              Develop practical machine learning and deep learning solutions for data-driven problems.
+            </p>
+            <div class="service-tools">
+              <span class="tool-badge">Python</span>
+              <span class="tool-badge">Scikit-learn</span>
+              <span class="tool-badge">PyTorch</span>
+            </div>
+          </div>
+
+          <!-- SERVICE 03 -->
+          <div class="service-card tilt-card highlighted">
+            <div class="service-top">
+              <span class="service-num">03</span>
+              <div class="service-icon-box gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">AI Engineering &amp; LLM Applications</h3>
+            <p class="service-desc">
+              Build intelligent applications using modern LLM technologies, RAG architectures, agents, embeddings, and
+              AI APIs.
+            </p>
+            <div class="service-tools">
+              <span class="tool-badge">RAG</span>
+              <span class="tool-badge">LangGraph</span>
+              <span class="tool-badge">LangChain</span>
+              <span class="tool-badge">OpenAI API</span>
+              <span class="tool-badge">Vector Databases</span>
+              <span class="tool-badge">Hugging Face</span>
+            </div>
+          </div>
+
+          <!-- SERVICE 04 -->
+          <div class="service-card tilt-card">
+            <div class="service-top">
+              <span class="service-num">04</span>
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">Interactive Dashboards &amp; Business Intelligence</h3>
+            <p class="service-desc">
+              Design interactive dashboards that transform complex data into decision-ready visual insights.
+            </p>
+            <div class="service-tools">
+              <span class="tool-badge">Power BI</span>
+              <span class="tool-badge">Tableau</span>
+              <span class="tool-badge">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CAREER OBJECTIVE SECTION ("Where I'm Heading")
+    ═══════════════════════════════════════════════ -->
+    <section id="objective" class="section objective-section">
+      <div class="container">
+        <div class="objective-card tilt-card">
+          <div class="objective-header">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="objective-tag">CAREER VISION</div>
+            <h2 class="objective-title">Where I'm Heading</h2>
+          </div>
+
+          <blockquote class="objective-quote">
+            "My goal is to grow at the intersection of Data Science, AI Engineering, and intelligent
+            systems&mdash;building reliable solutions that turn complex data and AI capabilities into meaningful
+            real-world impact.
+            <br><br>
+            I aim to continuously strengthen both the mathematical foundations and engineering skills behind modern AI
+            while contributing to ambitious projects that solve meaningful problems."
+          </blockquote>
+
+          <div class="objective-footer">
+            <div class="author-block">
+              <div class="author-name">Al-baraa Hegaz</div>
+              <div class="author-role">AI Engineer &amp; Data Scientist &bull; Cairo, Egypt</div>
+            </div>
+            <div class="objective-circuit-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v6M12 16v6M2 12h6M16 12h6"></path>
+                <circle cx="12" cy="2" r="1.5"></circle>
+                <circle cx="12" cy="22" r="1.5"></circle>
+                <circle cx="2" cy="12" r="1.5"></circle>
+                <circle cx="22" cy="12" r="1.5"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         LEADERSHIP & COMMUNITY SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="leadership" class="section leadership-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">BEYOND THE TERMINAL</div>
+          <h2 class="section-title">Leadership &amp; <span class="text-gold-gradient">Community Engagement</span></h2>
+          <p class="section-lead">Demonstrated organizational capability, public communication, and student governance.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="leadership-grid">
+          <div class="leadership-card tilt-card">
+            <div class="lead-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="lead-role">Conference Organizer</h3>
+            <div class="lead-org">10th International Conference of the Faculty of Science &mdash; Al-Azhar University
+            </div>
+            <p class="lead-desc">Coordinated multi-disciplinary scientific conference logistics, session management, and
+              delegate communications.</p>
+          </div>
+
+          <div class="leadership-card tilt-card">
+            <div class="lead-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="lead-role">Volunteer</h3>
+            <div class="lead-org">College Student Activities &mdash; Al-Azhar University</div>
+            <p class="lead-desc">Active contributor in student development workshops, academic peer support, and
+              university community initiatives.</p>
+          </div>
+
+          <div class="leadership-card tilt-card">
+            <div class="lead-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="lead-role">Executive Board Member</h3>
+            <div class="lead-org">National Al-Azhar Student Union</div>
+            <p class="lead-desc">Represented student body interests, coordinated university-wide assemblies, and
+              formulated student support agendas.</p>
+          </div>
+        </div>
+
+        <!-- Demonstrated Strengths Pills -->
+        <div class="strengths-wrapper">
+          <span class="strength-label">Demonstrated Competencies:</span>
+          <div class="strength-pills">
+            <span class="strength-pill">Leadership</span>
+            <span class="strength-pill">Public Speaking</span>
+            <span class="strength-pill">Communication</span>
+            <span class="strength-pill">Teamwork</span>
+            <span class="strength-pill">Event Organization</span>
+            <span class="strength-pill">Strategic Planning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-sub-badge">COLLABORATE &amp; CONNECT</div>
+          <h2 class="section-title">Let's Build Something <span class="text-gold-gradient">Intelligent</span>.</h2>
+          <p class="section-lead">Have a data problem, AI idea, or project in mind? Let's turn it into something useful.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels & Information -->
+          <div class="contact-info-card tilt-card">
+            <h3 class="contact-info-title">Direct Inquiries</h3>
+            <p class="contact-info-desc">
+              I am open to discuss AI engineering projects, data science workflows, research initiatives, or innovative
+              system architectures.
+            </p>
+
+            <div class="contact-channels">
+              <a href="mailto:albaraahegaz@gmail.com" class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-name">Email</span>
+                  <span class="channel-val">albaraahegaz@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/al-baraa-hegaz-b6643a388/" target="_blank" rel="noopener noreferrer"
+                class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-name">LinkedIn</span>
+                  <span class="channel-val">al-baraa-hegaz-b6643a388</span>
+                </div>
+              </a>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-name">Location</span>
+                  <span class="channel-val">Cairo, Egypt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Hub -->
+            <div class="social-hub">
+              <span class="social-label">Additional Profiles:</span>
+              <div class="social-links-row">
+                <a href="https://github.com/albaraahegaz/" class="social-btn" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="social-btn" title="YouTube (Placeholder)" aria-label="YouTube Channel"
+                  onclick="handlePlaceholderClick(event, 'YouTube Channel')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+                <a href="#" class="social-btn" title="Facebook (Placeholder)" aria-label="Facebook Profile"
+                  onclick="handlePlaceholderClick(event, 'Facebook Profile')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card tilt-card">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Dr. Ahmed Hassan"
+                  required autocomplete="name">
+                <span class="field-error" id="nameError">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="name@domain.com"
+                  required autocomplete="email">
+                <span class="field-error" id="emailError">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject <span class="required">*</span></label>
+                <input type="text" id="contactSubject" name="subject" class="form-input"
+                  placeholder="Project inquiry / Collaboration" required>
+                <span class="field-error" id="subjectError">Please provide a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message <span class="required">*</span></label>
+                <textarea id="contactMessage" name="message" class="form-textarea" rows="4"
+                  placeholder="Briefly outline your data problem, AI initiative, or question..." required></textarea>
+                <span class="field-error" id="messageError">Please enter your message (min 10 characters)</span>
+              </div>
+
+              <!-- Honeypot input -->
+              <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <button type="submit" class="btn btn-primary btn-submit magnetic-btn" id="submitBtn">
+                <span class="btn-text">SEND MESSAGE</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="formSuccessToast" class="form-success-toast" role="alert" aria-live="polite">
+                <div class="toast-icon">&check;</div>
+                <div class="toast-content">
+                  <div class="toast-title">Message Received!</div>
+                  <div class="toast-desc">Thank you for reaching out. I will respond to your inquiry promptly.</div>
+                </div>
+              </div>
+            </form>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-brand">&lang;AH&rang;</a>
+        <div class="footer-text">
+          <p class="copyright">&copy; 2026 Al-baraa Hegaz. All rights reserved.</p>
+          <p class="footer-role">AI Engineer &amp; Data Scientist &bull; Cairo, Egypt</p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page">
+          <span>&uarr; Back to top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECT DETAIL MODAL
+  ═══════════════════════════════════════════════ -->
+  <div id="projectModal" class="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-overlay" onclick="closeProjectModal()"></div>
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close dialog">&times;</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Curriculum Vitae Dialog Modal -->
+  <div id="cvModal" class="project-modal" aria-hidden="true" role="dialog" aria-labelledby="cvModalTitle">
+    <div class="modal-overlay" onclick="closeCvModal()"></div>
+    <div class="modal-window cv-modal-window">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close CV dialog">&times;</button>
+      <div class="modal-content">
+        <div class="modal-header-strip">
+          <span class="modal-kicker">CURRICULUM VITAE PREVIEW</span>
+          <h3 id="cvModalTitle" class="modal-main-title">Al-baraa Hegaz &mdash; AI Engineer &amp; Data Scientist</h3>
+        </div>
+        <div class="cv-summary-body">
+          <p><strong>Undergraduate:</strong> 4th-year Physics &amp; Mathematics (Specializing in AI/ML &amp; Data
+            Science)</p>
+          <p><strong>Location:</strong> Cairo, Egypt &bull; <strong>Email:</strong> albaraahegaz@gmail.com</p>
+          <p><strong>Primary Competencies:</strong> Machine Learning, Deep Learning (PyTorch), Agentic RAG (LangGraph),
+            Data Analysis (SQL, Pandas), BI (Power BI).</p>
+          <div class="cv-action-row">
+            <a href="mailto:albaraahegaz@gmail.com?subject=Requesting%20Al-baraa%20Hegaz%20CV" class="btn btn-primary">
+              <span>REQUEST OFFICIAL PDF CV</span>
+            </a>
+            <button class="btn btn-secondary" onclick="closeCvModal()">
+              <span>CLOSE PREVIEW</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageLightboxModal" class="image-lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <div class="lightbox-overlay" onclick="closeImageLightbox()"></div>
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" onclick="closeImageLightbox()"
+        aria-label="Close image preview">&times;</button>
+      <img id="lightboxImg" src="" alt="Enlarged preview" class="lightbox-img">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- General Placeholder Notice Toast -->
+  <div id="placeholderToast" class="placeholder-toast" role="status" aria-live="polite">
+    <span id="placeholderText"></span>
+  </div>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
